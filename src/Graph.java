@@ -1,3 +1,9 @@
+/************************************************
+ * Name: Grant Von Hagen (251307427)
+ * Class: Graph.java
+ * Class: 2210 
+ * Description: Graph Node holds int name and boolean marked
+ *************************************************************/
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

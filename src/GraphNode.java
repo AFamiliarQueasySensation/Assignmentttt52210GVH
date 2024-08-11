@@ -1,22 +1,42 @@
-
+/************************************************
+ * Name: Grant Von Hagen (251307427)
+ * Class: GraphNode.java
+ * Class: 2210 
+ * Description: Graph Node holds int name and boolean marked
+ *************************************************************/
 public class GraphNode {
 
-//	I need 2 variables, name and mark
+int name;
+boolean mark;
 	
 	public GraphNode(int name) {
-//		It's probably worth it to do something with that name argument
+
+		this.name = name;
+		this.mark = false;
 	}
 
 	
-//	setters and getters, should be fun
+/**
+ * Sets mark as whatever you pass through parameter
+ * @param mark True/False
+ */
 	public void mark(boolean mark) {
+		this.mark = mark;
 		
 	}
-	
+	/**
+	 * 
+	 * @return Marked True/False
+	 */
 	public boolean isMarked() {
+		return mark;
 	}
-	
+	/**
+	 * 
+	 * @return int Name
+	 */
 	public int getName() {
+		return name;
 	}
 	
 }
