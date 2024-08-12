@@ -83,9 +83,13 @@ public class TestGraph {
 	    /* Get all nodes of the graph */
 	    for (i = 0; i < numNodes; ++i) {
 		V[i] = G.getNode(i);
-		if (V[i].getName() != i) failed = true;
+		
+		if (V[i].getName() != i) 
+			{
+				failed = true;
+			}
 	    }
-
+	    
 	    V[2].mark(true);
 	    if (V[2].isMarked() == false) failed = true;
 
@@ -93,6 +97,7 @@ public class TestGraph {
 	    else  System.out.println("    Test 2 failed");
 	}
 	catch (GraphException e) {
+
 		System.out.println("    Test 2 failed");
 	}
 
@@ -149,7 +154,7 @@ public class TestGraph {
 	catch (GraphException e) {
 	    System.out.println("    Test 5 failed");
 	}
-
+	
         try {
             for (i = 0; i < numNodes; ++i) {
                 u = G.getNode(i);

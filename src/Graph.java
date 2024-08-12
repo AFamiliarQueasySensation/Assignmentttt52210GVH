@@ -23,6 +23,14 @@ public class Graph implements GraphADT {
 	public Graph(int n) {
 		adjlist = new HashMap<>(n);
 		nodeList = new ArrayList<>(n);
+		for (int i = 0 ; i < n; i++)
+		{
+			GraphNode temp = new GraphNode(i);
+			adjlist.put(temp, new ArrayList<>());
+			nodeList.add(temp);
+		}
+		
+		
 	}
 
 
@@ -60,13 +68,14 @@ public class Graph implements GraphADT {
 
 		try
 		{
-			GraphNode temp = nodeList.get(u);
-			if (temp == null)
+			for (GraphNode node : nodeList)
 			{
-				throw new GraphException("No Node Exists");
+				if (node.getName() == u)
+				{
+					return node;
+				}
 			}
-			return temp;
-			
+			throw new GraphException("Node doesnt exist");
 		}
 		catch(IndexOutOfBoundsException e)
 		{
